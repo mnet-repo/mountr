@@ -1,8 +1,7 @@
 #!/system/bin/sh
 setprop sys.usb.config mtp,cdrom && setprop sys.usb.configfs 1
 echo "mtp, cdrom" >/config/usb_gadget/g1/configs/b.1/strings/0x409/configuration
-rm /config/usb_gadget/g1/configs/b.1/f1
-rm /config/usb_gadget/g1/configs/b.1/f2
+rm /config/usb_gadget/g1/configs/b.1/f*
 echo $1 >/config/usb_gadget/g1/functions/mass_storage.0/lun.0/file
 echo 0x2e61 >/config/usb_gadget/g1/idProduct
 echo 0x22b8 >/config/usb_gadget/g1/idVendor
@@ -12,4 +11,3 @@ ln -s /config/usb_gadget/g1/functions/mtp.gs0 /config/usb_gadget/g1/configs/b.1/
 ln -s /config/usb_gadget/g1/functions/mass_storage.0  /config/usb_gadget/g1/configs/b.1/f2
 echo 4e00000.dwc3 > /config/usb_gadget/g1/UDC
 setprop sys.usb.state mtp,cdrom
-
