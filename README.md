@@ -23,3 +23,5 @@ getprop | grep usbcontroller
 
 
 This script may need to be modified for your device. Simple concept, sometimes difficult to determine correct usb config. Your linking an iso and device identifiers to the corresponding files somewhere in /config or /sys (likely). I have been using Mountr and DriveDroid for this up until Android 9/10. This same approach also worked on SAMSUNG/HTC/LG devices I have had. "usbcontroller" variable is often different per device/ROM.
+
+Script as givin is working in Android Q on moto g8(sofiap)
