@@ -1,4 +1,4 @@
-#!/system/xbin/bash
+#!/system/bin/sh
 setprop sys.usb.config mtp,cdrom && setprop sys.usb.configfs 1
 echo "mtp, cdrom" >/config/usb_gadget/g1/configs/b.1/strings/0x409/configuration
 rm /config/usb_gadget/g1/configs/b.1/f1
