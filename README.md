@@ -8,12 +8,17 @@ I named it after "mountr" since I found the first working variables I needed by 
 Examples to find correct values such as usbdevice drivers and serial ids, also where to write the corresponding links/files in the /config and /sys directories.
 
 su
+
 strings /init.* |grep lun
+
 strings /vendor/etc/init/hw/* |grep lun
+
 strings /vendor/etc/init/hw/* |grep cdimage
+
 strings /system/etc/init/*
 
 su
+
 getprop | grep usbcontroller
 
 
